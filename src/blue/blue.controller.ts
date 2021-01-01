@@ -11,4 +11,6 @@ export class BlueController {
   }
 
   // This is a simple project about simple api
+  // + Mongodb
+  // + typeorm
 }
