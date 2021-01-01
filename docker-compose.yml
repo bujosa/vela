@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  blue:
+    container_name: 'blue'
+    restart: 'always'
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./usr/src/app
+    # env_file: ./env/.api-gateway.env
