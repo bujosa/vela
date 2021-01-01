@@ -8,7 +8,7 @@ import { Blue } from './entity/blue.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'mongodb',
-      url: 'mongodb://localhost/blue',
+      url: `${process.env.MONGO_URL}`,
       synchronize: true,
       useUnifiedTopology: true,
       entities: [Blue],

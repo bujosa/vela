@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { BlueModule } from './blue/blue.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
-  imports: [BlueModule],
+  imports: [BlueModule, ConfigModule.forRoot({ isGlobal: true })],
   controllers: [],
   providers: [],
 })
