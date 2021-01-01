@@ -4,6 +4,6 @@ import { BlueService } from './blue.service';
 
 @Module({
   controllers: [BlueController],
-  providers: [BlueService]
+  providers: [BlueService],
 })
 export class BlueModule {}
