@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { BlueController } from './blue.controller';
 import { BlueService } from './blue.service';
+import { Blue } from './entity/blue.entity';
 
 @Module({
   imports: [
@@ -10,7 +11,7 @@ import { BlueService } from './blue.service';
       url: 'mongodb://localhost/blue',
       synchronize: true,
       useUnifiedTopology: true,
-      entities: [],
+      entities: [Blue],
     }),
   ],
   controllers: [BlueController],
