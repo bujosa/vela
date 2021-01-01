@@ -7,8 +7,11 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    external_links:
+      - mongo
     ports:
       - '3000:3000'
     volumes:
       - ./usr/src/app
+
     # env_file: ./env/.api-gateway.env
