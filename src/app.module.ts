@@ -17,7 +17,5 @@ import { Blue } from './blue/entity/blue.entity';
       entities: [Blue],
     }),
   ],
-  controllers: [],
-  providers: [],
 })
 export class AppModule {}
