@@ -6,14 +6,19 @@ import { IBlue } from '../interfaces/blue-entity.interface';
 export class Blue implements IBaseEntity, IBlue {
   @ObjectIdColumn()
   _id: string;
+
   @PrimaryColumn()
   id: string;
+
   @Column()
   name: string;
+
   @Column()
   createdAt: string;
+
   @Column()
   updatedAt: string;
+
   @Column({ default: false })
   deleted: string;
 }
