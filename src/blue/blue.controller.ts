@@ -7,32 +7,32 @@ import { Blue } from './entity/blue.entity';
 
 @Controller('blue')
 export class BlueController {
-  constructor(private blueService: BlueService) {}
+  constructor(private service: BlueService) {}
 
   @Get()
   public async getAllColors(): Promise<Blue[]> {
-    return this.blueService.getAllColors();
+    return this.service.getAllColors();
   }
 
   @Post('/get')
   public async getColorById(
     @Body() getColorByIdDto: GetColorByIdDto,
   ): Promise<Blue> {
-    return this.blueService.getColorById(getColorByIdDto);
+    return this.service.getColorById(getColorByIdDto);
   }
 
   @Post()
   public async createColor(
     @Body() createColorDto: CreateColorDto,
   ): Promise<Blue> {
-    return this.blueService.createColor(createColorDto);
+    return this.service.createColor(createColorDto);
   }
 
   @Post('/update')
   public async updateColor(
     @Body() updateColorDto: UpdateColorDto,
   ): Promise<Blue> {
-    return this.blueService.updateColor(updateColorDto);
+    return this.service.updateColor(updateColorDto);
   }
 
   // This is a simple project about simple api
