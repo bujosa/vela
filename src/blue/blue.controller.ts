@@ -11,7 +11,7 @@ export class BlueController {
 
   @Get()
   public async getAllColors(): Promise<Blue[]> {
-    return await this.blueService.getAllColors();
+    return this.blueService.getAllColors();
   }
 
   @Post('/get')
@@ -25,14 +25,14 @@ export class BlueController {
   public async createColor(
     @Body() createColorDto: CreateColorDto,
   ): Promise<Blue> {
-    return await this.blueService.createColor(createColorDto);
+    return this.blueService.createColor(createColorDto);
   }
 
   @Post('/update')
   public async updateColor(
     @Body() updateColorDto: UpdateColorDto,
   ): Promise<Blue> {
-    return await this.blueService.updateColor(updateColorDto);
+    return this.blueService.updateColor(updateColorDto);
   }
 
   // This is a simple project about simple api
