@@ -4,7 +4,6 @@ import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Blue } from './blue/entity/blue.entity';
 
-// I using typeOrm for management database
 @Module({
   imports: [
     BlueModule,
